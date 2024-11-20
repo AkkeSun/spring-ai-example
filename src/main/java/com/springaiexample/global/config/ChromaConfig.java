@@ -12,8 +12,8 @@ public class ChromaConfig {
     @Bean
     public ChromaEmbeddingStore chromaEmbeddingStore() {
         return ChromaEmbeddingStore.builder()
-            .baseUrl("http://localhost:11434")
-            .collectionName("test")
+            .baseUrl("http://localhost:8000")
+            .collectionName("product")
             .timeout(ofSeconds(60))
             .build();
     }
