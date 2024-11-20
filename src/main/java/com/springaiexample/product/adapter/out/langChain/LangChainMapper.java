@@ -13,7 +13,6 @@ public class LangChainMapper {
         metadata.put("category", product.getCategory());
         metadata.put("description", product.getDescription());
         metadata.put("price", product.getPrice());
-        metadata.put("reviewSummary", product.getReviewSummary());
         return metadata;
     }
 }

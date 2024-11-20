@@ -13,7 +13,17 @@ public class ProductMapper {
         metadata.put("category", product.getCategory());
         metadata.put("description", product.getDescription());
         metadata.put("price", product.getPrice());
-        metadata.put("reviewSummary", product.getReviewSummary());
         return metadata;
     }
+
+    public Product toDomain(Metadata metadata) {
+        return Product.builder()
+            .productId(metadata.getLong("productId"))
+            .productName(metadata.getString("productName"))
+            .category(metadata.getString("category"))
+            .description(metadata.getString("description"))
+            .price(metadata.getInteger("price"))
+            .build();
+    }
+
 }
